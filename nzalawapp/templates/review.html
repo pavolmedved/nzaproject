@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Review Here:</h3>
+<div class="card">
+        <div class="card-body">
+            <p>Review Form:</p>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1"></label>
+
+             {{ form.review(class="form-control",rows='6') }}
+
+        </div>
+    
+<form action="" method="POST">
+        <div class="form-group">
+            <fieldset>
+                <label for="exampleInputEmail">Email address</label>
+
+                {{ form.email(class="form-control")}}
+                    
+            </fieldset>
+            
+            <fieldset>
+                {{ form.submit(class="btn btn-primary")}}
+                    
+            </fieldset>
+
+
+
+        </div>
+
+         
+</form>
+
+{% endblock content %}

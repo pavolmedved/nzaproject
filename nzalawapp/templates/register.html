@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Register Here:</h3>
+<div class="card">
+    <div class="card-body">
+        <p>Register Form:</p>
+        <form action="" method="POST">
+            {{ form.hidden_tag() }}
+            <fieldset>
+                <label for="username">Username</label>
+                {{ form.username(class="form-control") }}
+            </fieldset>
+            <fieldset>
+                <label for="email">Email</label>
+                {{ form.email(class="form-control")}}
+            </fieldset>
+            <fieldset>
+                <label for="passwword">Password</label>
+                {{ form.password(class="form-control")}}
+            </fieldset>
+            <fieldset>
+                    <label for="confirm password">Confirm Password</label>
+                    {{ form.confirm_pass(class="form-control")}}
+            </fieldset>
+            {{ form.submit(class="btn btn-primary")}}
+
+            
+
+        </form>
+    </div>
+
+</div>
+
+
+
+{% endblock content %}
